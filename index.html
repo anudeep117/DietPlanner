@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Planner</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="app.js" charset="utf-8"></script>
+    <style>
+        table
+        {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 35%;
+        }
+
+        td, th
+        {
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <!-- Current weight and fat --> 
+        <tr>
+            <td>Current Weight</td>
+            <td><input type="number" id="currentWt" placeholder="105"></td>
+            <td>kg</td>
+        </tr>
+        <tr>
+            <td>Current Fat %</td>
+            <td><input type="number" id="currentFat" placeholder="30"></td>
+            <td>%</td>
+        </tr>
+        <!-- Ideal weight and fat -->
+        <tr>
+            <td>Ideal Weight</td>
+            <td><input type="number" id="idealWt" placeholder="75"></td>
+            <td>kg</td>
+        </tr>
+        <tr>
+            <td>Ideal Fat %</td>
+            <td><input type="number" id="idealFat" placeholder="15"></td>
+            <td>%</td>
+        </tr>
+        <!-- Duration -->
+        <tr>
+            <td>Duration in Weeks</td>
+            <td><input type="number" id="duration" placeholder="6"></td>
+            <td>weeks</td>
+        </tr>
+        <!-- Calorie out -->
+        <tr>
+            <td>BMR</td>
+            <td><input type="number" id="bmr" placeholder="2000"></td>
+            <td>cal</td>
+        </tr>
+        <tr>
+            <td>Active Calories</td>
+            <td><input type="number" id="activeCal" placeholder="700"></td>
+            <td>cal</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <!-- Calorie In -->
+        <tr>
+            <td>Calorie Intake</td>
+            <td><p id="calIntake"></p></td>
+            <td>cal</td>
+        </tr>
+        <!-- Macro split -->
+        <table>
+            <tr>
+                <td>P</td>
+                <td>C</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td><input type="number" id="pSplitPcent" placeholder="Protein %"></td>
+                <td><input type="number" id="cSplitPcent" placeholder="Carbs %"></td>
+                <td><input type="number" id="fSplitPcent" placeholder="Fat %"></td>
+            </tr>
+            <tr>
+                <td><p id="pSplitGrams"></p></td>
+                <td><p id="cSplitGrams"></p></td>
+                <td><p id="fSplitGrams"></p></td>
+            </tr>
+        </table>
+    </table>
+
+    <br>
+
+    <!-- Calculate button [remove this in the future, and make automatic update, callback]-->
+    <button id="calcBtn">Calculate </button>
+</body>
+</html>
